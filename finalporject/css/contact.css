@@ -1,0 +1,143 @@
+:root{
+    --main-color:#9c70f2;
+    --dark:#333;
+    --white:white;
+    --rgb:rgb(95, 2, 30);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Alfa Slab One', cursive;
+    text-decoration: none !important;
+    
+}
+body.backgraund{
+    background:linear-gradient(to bottom, rgb(95, 2, 30) ,rgb(179, 79, 157))
+}
+/* dark mode */
+body.dark-theme{
+    background-color: var(--dark) ;
+    
+}
+/* text */
+.text{
+    color: var(--rgb);
+    position: relative;
+    font-size: 40px;
+    background-color: var(--main-color);
+    width: 250px;
+    text-align: center;
+    padding: 7;
+    border-radius: 10px;
+    left: 1%;
+    top: 10px;
+}
+.text2{
+    text-align: center;
+    position: relative;
+    color: var(--main-color);
+    top:10px;
+
+}
+/* box */
+.box{
+    position: relative;
+    text-align: left;
+    border-radius: 20px;  
+    border:solid 1px var(--main-color);
+    background-color: var(--main-color);
+    height: 360px;
+    color: var(--rgb);
+}
+.addres{
+    border: solid 1px var(--rgb);
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 30px;
+}
+.email{
+    border: solid 1px var(--rgb);
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    
+}
+.number{
+    border: solid 1px var(--rgb);
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 20px;
+}
+/* toggle bar */
+.toggle input[type="checkbox"]{
+    display: none;
+}
+.toggle label{
+    position: absolute;
+    background-color: rgb(36, 2, 12);
+    border: 2px solid var(--main-color);
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    transition: all ease-in-out 0.4s;
+    width: 100px;
+    height: 50px;
+    left: 90%;
+    top: 10px;
+}
+.toggle label::after{
+    position: absolute;
+    background-color: var(--main-color);
+    border-radius:50% ;
+    content: " ";
+    cursor: pointer;
+    display: inline-block;
+    left: 3px;
+    top: 2px;
+    transition: all ease-in-out 0.4s;
+    width: 42px;
+    height: 42px;
+}
+.toggle input[type="checkbox"]:checked ~ label{
+    background-color: white;
+    border-color: var(--main-color);
+}
+.toggle input[type="checkbox"]:checked ~ label::after{
+    background-color: var(--main-color);
+    transform: translateX(50px);
+
+}
+@media only screen and (max-width:768px){
+    .text{
+        position: relative;
+        font-size: 20px;
+        width: 100px;
+        text-align: center;
+        padding: 7;
+        border-radius: 10px;
+        
+    }
+    .text2{
+    text-align: center;
+    position: relative;
+    top: -34px;
+    }
+    .toggle label{
+        left: 73%;
+    }
+    .box{
+        width: 326px !important;
+        height: 306px;
+    }
+    .addres{
+        font-size: 18px;
+    }
+    .email{
+        margin-top: 30px;
+        font-size: 18px;
+    }
+    .number{
+        margin-top: 30;
+        font-size: 18px;
+    }
+}

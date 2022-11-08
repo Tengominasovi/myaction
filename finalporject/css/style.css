@@ -1,0 +1,148 @@
+:root{
+    --main-color:#9c70f2;
+    --dark:#333;
+    --rgb:rgb(95, 2, 30);
+    --shadow:#97003a;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Alfa Slab One', cursive;
+}
+body.backgraund{
+    background:linear-gradient(to bottom, rgb(95, 2, 30) ,rgb(179, 79, 157))
+}
+/* dark mode */
+body.dark-theme{
+    background-color: var(--dark) ;
+    
+}
+/* text */
+a{
+    text-decoration:none !important;
+}
+.logo{
+    color: var(--main-color);
+    
+    
+}
+.contact{
+    color: var(--rgb);
+    font-size: 40px;
+    background-color: var(--main-color);
+    width: 250px;
+    text-align: center;
+    padding: 7;
+    border-radius: 10px;
+    margin-left: 59%;
+}
+.text{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    color: var(--main-color);
+}
+.text2{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 60px;
+    color: var(--main-color);
+}
+/* about me */
+.text3{
+    border: solid none 1px;
+    background-color: var(--main-color);
+    text-align: center;
+    box-shadow: 5px 8px 5px 5px var(--shadow);
+}
+/* education */
+.text4{
+    border: solid none 1px;
+    background-color: var(--main-color);
+    text-align: center;
+    box-shadow: 5px 8px 5px 5px var(--shadow);
+}
+/* exparance */
+.text5{
+    border: solid none 1px;
+    background-color: var(--main-color);
+    text-align: center;
+    box-shadow: 5px 8px 5px 5px var(--shadow);
+}
+/* link */
+.project{
+    text-align: center;
+    border: solid none 1px;
+    
+}
+/* footer */
+footer{
+    background-color: var(--main-color);
+    text-align: right;
+    height: 60px;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+/* toggle design */
+.toggle input[type="checkbox"]{
+    display: none;
+}
+.toggle label{
+    position: relative;
+    background-color: rgb(36, 2, 12);
+    border: 2px solid var(--main-color);
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    transition: all ease-in-out 0.4s;
+    width: 100px;
+    height: 50px;
+}
+.toggle label::after{
+    
+    background-color: var(--main-color);
+    border-radius:50% ;
+    content: " ";
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 3px;
+    margin-top: 2px;
+    transition: all ease-in-out 0.4s;
+    width: 42px;
+    height: 42px;
+}
+.toggle input[type="checkbox"]:checked ~ label{
+    background-color: white;
+    border-color: var(--main-color);
+}
+.toggle input[type="checkbox"]:checked ~ label::after{
+    background-color: var(--main-color);
+    transform: translateX(50px);
+
+}
+@media only screen and (max-width:768px){
+    body{ 
+        position: relative;
+    }
+    .contact{
+        color: var(--white);
+        font-size: 26px;
+        background-color: var(--main-color);
+        width: 166px;
+        text-align: center;
+        padding: 7;
+        border-radius: 10px;
+        margin-left: 52%;
+        margin-top: -90px;
+        
+    }
+    .text{
+        font-size: 18px;
+        text-align: center;
+    }
+    .text2{
+        font-size: 25px;
+    }
+
+}
